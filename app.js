@@ -6,8 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const dotenv = require('dotenv')
 
 const app = express();
+dotenv.config({ path: '.env' })
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const dev_db_url = 'mongodb+srv://srisudheera:mypw@cluster0-1yttw.mongodb.net/LocalLibrary?retryWrites=true&w=majority'
