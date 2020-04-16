@@ -1,3 +1,5 @@
+### used same repo for module 5 and 6 assignments. the comments with completed module 6 is the module 6 assignment.
+
 * ORM -Object-relational mapping
 * ODM -Object Data Model 
 
