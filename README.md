@@ -1,4 +1,4 @@
-### used same repo for module 5-Data,6-controllers and 7-views assignments. the comments with completed module 6 is the module 6 assignment.
+### used same repo for module 5-Data,6-controllers and 6-views assignments. the comments with completed module 6 is the module 6 assignment.
 
 * ORM -Object-relational mapping
 * ODM -Object Data Model 
