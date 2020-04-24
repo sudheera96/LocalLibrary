@@ -3,7 +3,7 @@ const async = require('async');
 const Genre = require('../models/genre');
 const validator = require('express-validator');
 // Display list of all Genre.
-exports.genre_list = function(req, res) {
+exports.genre_list = function(req, res,next) {
    Genre.find()
     .populate('genre')
     .sort([['name','ascending']])
