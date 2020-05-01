@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+  p Welcome to #[em Sri Sudheera Chitipolu], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
 
-  h1 Dynamic content
+  h1 Library Records
 
   if error
     p Error getting dynamic content.
@@ -17,3 +17,4 @@ block content
       li #[strong Copies available:] !{data.book_instance_available_count} 
       li #[strong Authors:] !{data.author_count}
       li #[strong Genres:] !{data.genre_count}
+  img.className#IdName(src="/images/lib.jpg" alt="book image")
