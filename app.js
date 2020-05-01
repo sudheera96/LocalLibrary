@@ -6,10 +6,12 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const helmet = require('helmet');
 
 const app = express();
-dotenv.config({ path: '.env' })
+app.use(helmet());
+dotenv.config({ path: '.env' });
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const dev_db_url =  process.env.ATLAS_URI
@@ -28,10 +30,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/catalog', catalogRouter); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
